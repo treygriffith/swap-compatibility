@@ -1,0 +1,43 @@
+.compat-table {
+	margin-bottom: 5em;
+}
+
+.compat-table td {
+	text-align: center;
+}
+
+.compat-table td:not([data-ignore]) {
+	cursor: pointer;
+}
+
+.popover {
+	max-width: 700px;
+	cursor: auto;
+}
+
+.popover-content {
+	display: none;
+}
+
+.popover-header {
+	text-align: center;
+}
+
+.popover .arrow:after {
+	border-bottom-color: #f7f7f7;
+}
+
+.icon {
+	margin: 0.2em;
+}
+
+ul.compat-progress {
+	list-style: none;
+	padding-left: 2em;
+	margin-bottom: 0;
+}
+
+ul.compat-progress span.bullet.icon {
+	margin-left: -1.5em;
+	margin-right: 0.75em;
+}

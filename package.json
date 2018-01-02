@@ -1,0 +1,35 @@
+{
+  "name": "swap-compatibility",
+  "version": "1.0.0",
+  "description": "Atomic Swap compatibility of cryptocurrencies on-chain and using payment channel networks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node index.js",
+    "watch": "npm-watch"
+  },
+  "watch": {
+  	"build": [
+  		"compatibility.json",
+  		"templates/index.hbs",
+  		"build.js"
+  	]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "author": {
+  	"name": "Trey Griffith",
+  	"url": "https://github.com/treygriffith"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "handlebars": "^4.0.11",
+    "npm-watch": "^0.3.0"
+  }
+}

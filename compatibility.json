@@ -1,0 +1,316 @@
+{
+	"specifications": [
+		{
+			"symbol": "ERC20",
+			"name": "ERC20 Tokens",
+			"platform": "ETH"
+		}
+	],
+	"currencies": [
+		{
+			"symbol": "BTC",
+			"name": "Bitcoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": {
+				"status": "mainnet"
+			},
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "BCH",
+			"name": "Bitcoin Cash",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": false,
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "DASH",
+			"name": "Dash",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": false,
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "DCR",
+			"name": "Decred",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256",
+				"BLAKE256"
+			],
+			"transaction-malleability-fix": false,
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "ETH",
+			"name": "Ethereum",
+			"hash-functions": [
+				"KECCAK256",
+				"SHA256",
+				"RIPEMD160"
+			],
+			"transaction-malleability-fix": {
+				"status": "mainnet"
+			},
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "GRS",
+			"name": "Groestlcoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": {
+				"status": "mainnet"
+			},
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "LTC",
+			"name": "Litecoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": {
+				"status": "mainnet"
+			},
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "XMR",
+			"name": "Monero",
+			"hash-functions": [
+			],
+			"transaction-malleability-fix": true,
+			"preimage-auditability": false,
+			"hashed-time-locked-contracts": false
+		},
+		{
+			"symbol": "SYS",
+			"name": "Syscoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": {
+				"status": "mainnet"
+			},
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "VIA",
+			"name": "Viacoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": {
+				"status": "mainnet"
+			},
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "VTC",
+			"name": "Vertcoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": {
+				"status": "mainnet"
+			},
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "ZEC",
+			"name": "Zcash",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": false,
+			"preimage-auditability":true,
+			"hashed-time-locked-contracts": true
+		}
+	],
+	"payment-channel-atomic-swap-implementations": [
+		{
+			"name": "lnd",
+			"url": "https://github.com/lightningnetwork/lnd",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA256"
+			],
+			"support": [
+				{
+					"currency": "BTC",
+					"status": "develop"
+				},
+				{
+					"currency": "LTC",
+					"status": "develop"
+				}
+			]
+		},
+		{
+			"name": "eclair",
+			"url": "https://github.com/ACINQ/eclair",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA256"
+			],
+			"support": [
+				{
+					"currency": "BTC",
+					"status": "develop"
+				},
+				{
+					"currency": "LTC",
+					"status": "develop"
+				},
+				{
+					"currency": "GRS",
+					"status": "develop"
+				},
+				{
+					"currency": "SYS",
+					"status": "develop"
+				}
+			],
+			"interoperability": [
+				"https://github.com/lightningnetwork/lnd"
+			]
+		},
+		{
+			"name": "c-lightning",
+			"url": "https://github.com/ElementsProject/lightning",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA256"
+			],
+			"support": [
+				{
+					"currency": "BTC",
+					"status": "develop"
+				}
+			],
+			"interoperability": [
+				"https://github.com/ACINQ/eclair",
+				"https://github.com/lightningnetwork/lnd"
+			]
+		},
+		{
+			"name": "raiden",
+			"url": "https://github.com/raiden-network/raiden",
+			"hash-functions": [
+				"KECCAK256"
+			],
+			"support": [
+				{
+					"currency": "ETH",
+					"status": "develop"
+				},
+				{
+					"specification": "ERC20",
+					"status": "develop"
+				}
+			]
+		}
+	],
+	"on-chain-atomic-swap-implementations": [
+		{
+			"name": "atomicswap",
+			"url": "https://github.com/decred/atomicswap",
+			"hash-functions": [
+				"RIPEMD160"
+			],
+			"support": [
+				{
+					"currency": "BTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DCR",
+					"status": "mainnet"
+				},
+				{
+					"currency": "LTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "PART",
+					"status": "mainnet"
+				},
+				{
+					"currency": "VTC",
+					"status": "mainnet"
+				}
+			]
+		},
+		{
+			"name": "ethatomicswap",
+			"url": "https://github.com/AltCoinExchange/ethatomicswap",
+			"hash-functions": [
+				"RIPEMD160"
+			],
+			"support": [
+				{
+					"currency": "ETH",
+					"status": "testnet"
+				}
+			],
+			"interoperability": [
+				"https://github.com/decred/atomicswap"
+			]
+		},
+		{
+			"name": "zbxcat",
+			"url": "https://github.com/zcash-hackworks/zbxcat",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA256"
+			],
+			"support": [
+				{
+					"currency": "ZEC",
+					"status": "develop"
+				},
+				{
+					"currency": "BTC",
+					"status": "develop"
+				}
+			]
+		}
+	]
+}
