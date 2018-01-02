@@ -54,7 +54,7 @@
 				"SHA256",
 				"BLAKE256"
 			],
-			"transaction-malleability-fix": false,
+			"transaction-malleability-fix": true,
 			"preimage-auditability": true,
 			"hashed-time-locked-contracts": true
 		},
