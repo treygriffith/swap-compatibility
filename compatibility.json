@@ -59,6 +59,18 @@
 			"hashed-time-locked-contracts": true
 		},
 		{
+			"symbol": "DOGE",
+			"name": "Dogecoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": false,
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": false
+		},
+		{
 			"symbol": "ETH",
 			"name": "Ethereum",
 			"hash-functions": [
