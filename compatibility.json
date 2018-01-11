@@ -8,6 +8,20 @@
 	],
 	"currencies": [
 		{
+			"symbol": "ABY",
+			"name": "ArtByte",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": {
+				"status": "mainnet"
+			},
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
 			"symbol": "BTC",
 			"name": "Bitcoin",
 			"hash-functions": [
