@@ -162,10 +162,10 @@
 						<tr>
 							<th></th>
 							{{#each currencies}}
-								<th scope="col">{{this.symbol}}</th>
+								<th scope="col" data-toggle="tooltip" title="{{this.name}}">{{this.symbol}}</th>
 							{{/each}}
 							{{#each specifications}}
-								<th scope="col">{{this.symbol}}</th>
+								<th scope="col" data-toggle="tooltip" title="{{this.name}}">{{this.symbol}}</th>
 							{{/each}}
 						</tr>
 					</thead>
