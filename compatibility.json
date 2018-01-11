@@ -34,6 +34,18 @@
 			"hashed-time-locked-contracts": true
 		},
 		{
+			"symbol": "BLK",
+			"name": "Blackcoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": false,
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
 			"symbol": "DASH",
 			"name": "Dash",
 			"hash-functions": [

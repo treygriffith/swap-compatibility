@@ -30,13 +30,14 @@
 					<thead>
 						<tr>
 							<th></th>
-							<th colspan="14">Currencies</th>
+							<th colspan="15">Currencies</th>
 							<th colspan="1">Token Specifications</th>
 						</tr>
 						<tr>
 							<th></th>
 								<th scope="col" data-toggle="tooltip" title="Bitcoin">BTC</th>
 								<th scope="col" data-toggle="tooltip" title="Bitcoin Cash">BCH</th>
+								<th scope="col" data-toggle="tooltip" title="Blackcoin">BLK</th>
 								<th scope="col" data-toggle="tooltip" title="Dash">DASH</th>
 								<th scope="col" data-toggle="tooltip" title="Decred">DCR</th>
 								<th scope="col" data-toggle="tooltip" title="Dogecoin">DOGE</th>
@@ -79,6 +80,48 @@
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
 													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BTC/BLK On-chain Swap Compatibility" data-content-el="#BTC-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BTC-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
 												</li>
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -706,6 +749,48 @@
 										</div>
 									<td class="bg-secondary" data-ignore data-toggle="popover" title="BCH/BCH On-chain Swap Compatibility" data-content-el="#BCH-BCH-on-chain-swap-compat">
 									</td>
+									<td class="bg-warning"  data-toggle="popover" title="BCH/BLK On-chain Swap Compatibility" data-content-el="#BCH-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BCH-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BCH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-warning"  data-toggle="popover" title="BCH/DASH On-chain Swap Compatibility" data-content-el="#BCH-DASH-on-chain-swap-compat">
 											5
 											/
@@ -1253,6 +1338,640 @@
 										</div>
 							</tr>
 							<tr>
+								<th scope="row">BLK</th>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/BTC On-chain Swap Compatibility" data-content-el="#BLK-BTC-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-BTC-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/BCH On-chain Swap Compatibility" data-content-el="#BLK-BCH-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-BCH-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BCH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-secondary" data-ignore data-toggle="popover" title="BLK/BLK On-chain Swap Compatibility" data-content-el="#BLK-BLK-on-chain-swap-compat">
+									</td>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/DASH On-chain Swap Compatibility" data-content-el="#BLK-DASH-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-DASH-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DASH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DASH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/DCR On-chain Swap Compatibility" data-content-el="#BLK-DCR-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-DCR-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/DOGE On-chain Swap Compatibility" data-content-el="#BLK-DOGE-on-chain-swap-compat">
+											4
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-DOGE-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													DOGE supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DOGE supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/ETH On-chain Swap Compatibility" data-content-el="#BLK-ETH-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-ETH-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/GRS On-chain Swap Compatibility" data-content-el="#BLK-GRS-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-GRS-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/LTC On-chain Swap Compatibility" data-content-el="#BLK-LTC-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-LTC-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/XMR On-chain Swap Compatibility" data-content-el="#BLK-XMR-on-chain-swap-compat">
+											2
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-XMR-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													XMR supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													XMR supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Common hash functions
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/PART On-chain Swap Compatibility" data-content-el="#BLK-PART-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-PART-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/SYS On-chain Swap Compatibility" data-content-el="#BLK-SYS-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-SYS-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/VIA On-chain Swap Compatibility" data-content-el="#BLK-VIA-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-VIA-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/VTC On-chain Swap Compatibility" data-content-el="#BLK-VTC-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-VTC-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/ZEC On-chain Swap Compatibility" data-content-el="#BLK-ZEC-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-ZEC-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ZEC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ZEC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="BLK/ERC20 On-chain Swap Compatibility" data-content-el="#BLK-ERC20-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="BLK-ERC20-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+							</tr>
+							<tr>
 								<th scope="row">DASH</th>
 									<td class="bg-warning"  data-toggle="popover" title="DASH/BTC On-chain Swap Compatibility" data-content-el="#DASH-BTC-on-chain-swap-compat">
 											5
@@ -1318,6 +2037,48 @@
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
 													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="DASH/BLK On-chain Swap Compatibility" data-content-el="#DASH-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="DASH-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DASH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DASH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
 												</li>
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -1913,6 +2674,48 @@
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
 													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="DCR/BLK On-chain Swap Compatibility" data-content-el="#DCR-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="DCR-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
 												</li>
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -2536,6 +3339,48 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-danger"  data-toggle="popover" title="DOGE/BLK On-chain Swap Compatibility" data-content-el="#DOGE-BLK-on-chain-swap-compat">
+											4
+											/
+											8
+									</td>
+										<div class="popover-content" id="DOGE-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													DOGE supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DOGE supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-danger"  data-toggle="popover" title="DOGE/DASH On-chain Swap Compatibility" data-content-el="#DOGE-DASH-on-chain-swap-compat">
 											4
 											/
@@ -3110,6 +3955,48 @@
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
 													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(SHA256, RIPEMD160)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="ETH/BLK On-chain Swap Compatibility" data-content-el="#ETH-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="ETH-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
 												</li>
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -3730,6 +4617,48 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-warning"  data-toggle="popover" title="GRS/BLK On-chain Swap Compatibility" data-content-el="#GRS-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="GRS-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-warning"  data-toggle="popover" title="GRS/DASH On-chain Swap Compatibility" data-content-el="#GRS-DASH-on-chain-swap-compat">
 											5
 											/
@@ -4305,6 +5234,48 @@
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
 													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="LTC/BLK On-chain Swap Compatibility" data-content-el="#LTC-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="LTC-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
 												</li>
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -4926,6 +5897,47 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-danger"  data-toggle="popover" title="XMR/BLK On-chain Swap Compatibility" data-content-el="#XMR-BLK-on-chain-swap-compat">
+											2
+											/
+											8
+									</td>
+										<div class="popover-content" id="XMR-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													XMR supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													XMR supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Common hash functions
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-danger"  data-toggle="popover" title="XMR/DASH On-chain Swap Compatibility" data-content-el="#XMR-DASH-on-chain-swap-compat">
 											2
 											/
@@ -5490,6 +6502,48 @@
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
 													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="PART/BLK On-chain Swap Compatibility" data-content-el="#PART-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="PART-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
 												</li>
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -6113,6 +7167,48 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-warning"  data-toggle="popover" title="SYS/BLK On-chain Swap Compatibility" data-content-el="#SYS-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="SYS-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-warning"  data-toggle="popover" title="SYS/DASH On-chain Swap Compatibility" data-content-el="#SYS-DASH-on-chain-swap-compat">
 											5
 											/
@@ -6685,6 +7781,48 @@
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
 													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="VIA/BLK On-chain Swap Compatibility" data-content-el="#VIA-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="VIA-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
 												</li>
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -7280,6 +8418,48 @@
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
 													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-warning"  data-toggle="popover" title="VTC/BLK On-chain Swap Compatibility" data-content-el="#VTC-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="VTC-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
 												</li>
 												<li>
 														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -7904,6 +9084,48 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-warning"  data-toggle="popover" title="ZEC/BLK On-chain Swap Compatibility" data-content-el="#ZEC-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="ZEC-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ZEC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ZEC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-warning"  data-toggle="popover" title="ZEC/DASH On-chain Swap Compatibility" data-content-el="#ZEC-DASH-on-chain-swap-compat">
 											5
 											/
@@ -8496,6 +9718,48 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-warning"  data-toggle="popover" title="ERC20/BLK On-chain Swap Compatibility" data-content-el="#ERC20-BLK-on-chain-swap-compat">
+											5
+											/
+											8
+									</td>
+										<div class="popover-content" id="ERC20-BLK-on-chain-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(SHA256, RIPEMD160)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-warning"  data-toggle="popover" title="ERC20/DASH On-chain Swap Compatibility" data-content-el="#ERC20-DASH-on-chain-swap-compat">
 											5
 											/
@@ -9058,13 +10322,14 @@
 					<thead>
 						<tr>
 							<th></th>
-							<th colspan="14">Currencies</th>
+							<th colspan="15">Currencies</th>
 							<th colspan="1">Token Specifications</th>
 						</tr>
 						<tr>
 							<th></th>
 								<th scope="col">BTC</th>
 								<th scope="col">BCH</th>
+								<th scope="col">BLK</th>
 								<th scope="col">DASH</th>
 								<th scope="col">DCR</th>
 								<th scope="col">DOGE</th>
@@ -9120,6 +10385,56 @@
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BTC/BLK Payment Channel Network Swap Compatibility" data-content-el="#BTC-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BTC-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
 												</li>
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
@@ -9842,6 +11157,56 @@
 										</div>
 									<td class="bg-secondary" data-ignore data-toggle="popover" title="BCH/BCH Payment Channel Network Swap Compatibility" data-content-el="#BCH-BCH-payment-channel-network-swap-compat">
 									</td>
+									<td class="bg-danger"  data-toggle="popover" title="BCH/BLK Payment Channel Network Swap Compatibility" data-content-el="#BCH-BLK-payment-channel-network-swap-compat">
+											5
+											/
+											10
+									</td>
+										<div class="popover-content" id="BCH-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BCH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-danger"  data-toggle="popover" title="BCH/DASH Payment Channel Network Swap Compatibility" data-content-el="#BCH-DASH-payment-channel-network-swap-compat">
 											5
 											/
@@ -10493,6 +11858,760 @@
 										</div>
 							</tr>
 							<tr>
+								<th scope="row">BLK</th>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/BTC Payment Channel Network Swap Compatibility" data-content-el="#BLK-BTC-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-BTC-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BTC fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/BCH Payment Channel Network Swap Compatibility" data-content-el="#BLK-BCH-payment-channel-network-swap-compat">
+											5
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-BCH-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BCH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BCH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-secondary" data-ignore data-toggle="popover" title="BLK/BLK Payment Channel Network Swap Compatibility" data-content-el="#BLK-BLK-payment-channel-network-swap-compat">
+									</td>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/DASH Payment Channel Network Swap Compatibility" data-content-el="#BLK-DASH-payment-channel-network-swap-compat">
+											5
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-DASH-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DASH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DASH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													DASH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/DCR Payment Channel Network Swap Compatibility" data-content-el="#BLK-DCR-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-DCR-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/DOGE Payment Channel Network Swap Compatibility" data-content-el="#BLK-DOGE-payment-channel-network-swap-compat">
+											4
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-DOGE-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													DOGE supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DOGE supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													DOGE fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/ETH Payment Channel Network Swap Compatibility" data-content-el="#BLK-ETH-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-ETH-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/GRS Payment Channel Network Swap Compatibility" data-content-el="#BLK-GRS-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-GRS-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/LTC Payment Channel Network Swap Compatibility" data-content-el="#BLK-LTC-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-LTC-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/XMR Payment Channel Network Swap Compatibility" data-content-el="#BLK-XMR-payment-channel-network-swap-compat">
+											3
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-XMR-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													XMR supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													XMR supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Common hash functions
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													XMR fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/PART Payment Channel Network Swap Compatibility" data-content-el="#BLK-PART-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-PART-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/SYS Payment Channel Network Swap Compatibility" data-content-el="#BLK-SYS-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-SYS-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/VIA Payment Channel Network Swap Compatibility" data-content-el="#BLK-VIA-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-VIA-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/VTC Payment Channel Network Swap Compatibility" data-content-el="#BLK-VTC-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-VTC-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/ZEC Payment Channel Network Swap Compatibility" data-content-el="#BLK-ZEC-payment-channel-network-swap-compat">
+											5
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-ZEC-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ZEC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ZEC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													ZEC fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="BLK/ERC20 Payment Channel Network Swap Compatibility" data-content-el="#BLK-ERC20-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="BLK-ERC20-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+							</tr>
+							<tr>
 								<th scope="row">DASH</th>
 									<td class="bg-danger"  data-toggle="popover" title="DASH/BTC Payment Channel Network Swap Compatibility" data-content-el="#DASH-BTC-payment-channel-network-swap-compat">
 											6
@@ -10579,6 +12698,56 @@
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="DASH/BLK Payment Channel Network Swap Compatibility" data-content-el="#DASH-BLK-payment-channel-network-swap-compat">
+											5
+											/
+											10
+									</td>
+										<div class="popover-content" id="DASH-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DASH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DASH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													DASH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
 												</li>
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
@@ -11298,6 +13467,56 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-danger"  data-toggle="popover" title="DCR/BLK Payment Channel Network Swap Compatibility" data-content-el="#DCR-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="DCR-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DCR fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-danger"  data-toggle="popover" title="DCR/DASH Payment Channel Network Swap Compatibility" data-content-el="#DCR-DASH-payment-channel-network-swap-compat">
 											6
 											/
@@ -11987,6 +14206,56 @@
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="DOGE/BLK Payment Channel Network Swap Compatibility" data-content-el="#DOGE-BLK-payment-channel-network-swap-compat">
+											4
+											/
+											10
+									</td>
+										<div class="popover-content" id="DOGE-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													DOGE supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													DOGE supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													DOGE fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
 												</li>
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
@@ -12706,6 +14975,56 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-danger"  data-toggle="popover" title="ETH/BLK Payment Channel Network Swap Compatibility" data-content-el="#ETH-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="ETH-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(SHA256, RIPEMD160)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ETH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-danger"  data-toggle="popover" title="ETH/DASH Payment Channel Network Swap Compatibility" data-content-el="#ETH-DASH-payment-channel-network-swap-compat">
 											6
 											/
@@ -13397,6 +15716,56 @@
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="GRS/BLK Payment Channel Network Swap Compatibility" data-content-el="#GRS-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="GRS-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													GRS fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
 												</li>
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
@@ -14119,6 +16488,56 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-danger"  data-toggle="popover" title="LTC/BLK Payment Channel Network Swap Compatibility" data-content-el="#LTC-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="LTC-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													LTC fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-danger"  data-toggle="popover" title="LTC/DASH Payment Channel Network Swap Compatibility" data-content-el="#LTC-DASH-payment-channel-network-swap-compat">
 											6
 											/
@@ -14808,6 +17227,55 @@
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="XMR/BLK Payment Channel Network Swap Compatibility" data-content-el="#XMR-BLK-payment-channel-network-swap-compat">
+											3
+											/
+											10
+									</td>
+										<div class="popover-content" id="XMR-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													XMR supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													XMR supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Common hash functions
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													XMR fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
 												</li>
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
@@ -15516,6 +17984,56 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-danger"  data-toggle="popover" title="PART/BLK Payment Channel Network Swap Compatibility" data-content-el="#PART-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="PART-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													PART fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-danger"  data-toggle="popover" title="PART/DASH Payment Channel Network Swap Compatibility" data-content-el="#PART-DASH-payment-channel-network-swap-compat">
 											6
 											/
@@ -16206,6 +18724,56 @@
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="SYS/BLK Payment Channel Network Swap Compatibility" data-content-el="#SYS-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="SYS-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													SYS fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
 												</li>
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
@@ -16927,6 +19495,56 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-danger"  data-toggle="popover" title="VIA/BLK Payment Channel Network Swap Compatibility" data-content-el="#VIA-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="VIA-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VIA fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-danger"  data-toggle="popover" title="VIA/DASH Payment Channel Network Swap Compatibility" data-content-el="#VIA-DASH-payment-channel-network-swap-compat">
 											6
 											/
@@ -17616,6 +20234,56 @@
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="VTC/BLK Payment Channel Network Swap Compatibility" data-content-el="#VTC-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="VTC-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													VTC fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
 												</li>
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
@@ -18335,6 +21003,56 @@
 												</li>
 											</ul>
 										</div>
+									<td class="bg-danger"  data-toggle="popover" title="ZEC/BLK Payment Channel Network Swap Compatibility" data-content-el="#ZEC-BLK-payment-channel-network-swap-compat">
+											5
+											/
+											10
+									</td>
+										<div class="popover-content" id="ZEC-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ZEC supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ZEC supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(RIPEMD160, SHA1, SHA256)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													ZEC fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
 									<td class="bg-danger"  data-toggle="popover" title="ZEC/DASH Payment Channel Network Swap Compatibility" data-content-el="#ZEC-DASH-payment-channel-network-swap-compat">
 											5
 											/
@@ -19024,6 +21742,56 @@
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 													BCH fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations in development
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Testnet
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													Implementations on Mainnet
+												</li>
+											</ul>
+										</div>
+									<td class="bg-danger"  data-toggle="popover" title="ERC20/BLK Payment Channel Network Swap Compatibility" data-content-el="#ERC20-BLK-payment-channel-network-swap-compat">
+											6
+											/
+											10
+									</td>
+										<div class="popover-content" id="ERC20-BLK-payment-channel-network-swap-compat">
+											<ul class="compat-progress">
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports HTLC
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													BLK supports public preimages
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													Common hash functions
+														(SHA256, RIPEMD160)
+												</li>
+												<li>
+														<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+													ERC20 fixed transaction malleability
+												</li>
+												<li>
+														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+													BLK fixed transaction malleability
 												</li>
 												<li>
 														<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
