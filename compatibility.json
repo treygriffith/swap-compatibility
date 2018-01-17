@@ -361,6 +361,136 @@
 					"status": "develop"
 				}
 			]
+		},
+		{
+			"name": "Blocknet",
+			"url": "https://github.com/BlocknetDX/BlockDX",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA256"
+			],
+			"support": [
+				{
+					"currency": "BAY",
+					"status": "mainnet"
+				},
+				{
+					"currency": "BTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "BCH",
+					"status": "mainnet"
+				},
+				{
+					"currency": "BLOCK",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DASH",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DCR",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DGB",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DOGE",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DYN",
+					"status": "mainnet"
+				},
+				{
+					"currency": "GAME",
+					"status": "mainnet"
+				},
+				{
+					"currency": "FAIR",
+					"status": "mainnet"
+				},
+				{
+					"currency": "HSR",
+					"status": "mainnet"
+				},
+				{
+					"currency": "LBC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "LTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "MONA",
+					"status": "mainnet"
+				},
+				{
+					"currency": "MUE",
+					"status": "mainnet"
+				},
+				{
+					"currency": "NMC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "NAV",
+					"status": "mainnet"
+				},
+				{
+					"currency": "PART",
+					"status": "mainnet"
+				},
+				{
+					"currency": "PPC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "PIVX",
+					"status": "mainnet"
+				},
+				{
+					"currency": "POT",
+					"status": "mainnet"
+				},
+				{
+					"currency": "QTUM",
+					"status": "mainnet"
+				},
+				{
+					"currency": "SEQ",
+					"status": "mainnet"
+				},
+				{
+					"currency": "STRAT",
+					"status": "mainnet"
+				},
+				{
+					"currency": "SYS",
+					"status": "mainnet"
+				},
+				{
+					"currency": "VRC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "XVG",
+					"status": "mainnet"
+				},
+				{
+					"currency": "VTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "VIA",
+					"status": "mainnet"
+				}
+			]
 		}
 	]
 }
