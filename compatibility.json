@@ -372,123 +372,123 @@
 			"support": [
 				{
 					"currency": "BAY",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "BTC",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "BCH",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "BLOCK",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "DASH",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "DCR",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "DGB",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "DOGE",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "DYN",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "GAME",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "FAIR",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "HSR",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "LBC",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "LTC",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "MONA",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "MUE",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "NMC",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "NAV",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "PART",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "PPC",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "PIVX",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "POT",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "QTUM",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "SEQ",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "STRAT",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "SYS",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "VRC",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "XVG",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "VTC",
-					"status": "mainnet"
+					"status": "testnet"
 				},
 				{
 					"currency": "VIA",
-					"status": "mainnet"
+					"status": "testnet"
 				}
 			]
 		}
