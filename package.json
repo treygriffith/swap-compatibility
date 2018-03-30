@@ -9,11 +9,11 @@
     "watch": "npm-watch"
   },
   "watch": {
-  	"build": [
-  		"compatibility.json",
-  		"templates/index.hbs",
-  		"build.js"
-  	]
+    "build": [
+      "compatibility.json",
+      "templates/index.hbs",
+      "build.js"
+    ]
   },
   "babel": {
     "presets": [
@@ -21,8 +21,8 @@
     ]
   },
   "author": {
-  	"name": "Trey Griffith",
-  	"url": "https://github.com/treygriffith"
+    "name": "Trey Griffith",
+    "url": "https://github.com/treygriffith"
   },
   "license": "MIT",
   "dependencies": {
