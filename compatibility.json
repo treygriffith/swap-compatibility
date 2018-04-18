@@ -110,6 +110,20 @@
 			"preimage-auditability": true,
 			"hashed-time-locked-contracts": true
 		},
+                {
+			"symbol": "FJC",
+			"name": "Fujicoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": {
+				"status": "mainnet"
+			},
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
 		{
 			"symbol": "GRS",
 			"name": "Groestlcoin",
