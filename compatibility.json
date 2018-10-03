@@ -507,6 +507,32 @@
 					"status": "testnet"
 				}
 			]
+		},
+		{
+			"name": "swap.online",
+			"url": "https://swap.online",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA256"
+			],
+			"support": [
+				{
+					"currency": "BTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "ETH",
+					"status": "mainnet"
+				},
+				{
+					"currency": "ERC20",
+					"status": "mainnet"
+				},
+				{
+					"currency": "EOS",
+					"status": "mainnet"
+				}
+			]
 		}
 	]
 }
