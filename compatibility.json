@@ -533,6 +533,24 @@
 					"status": "mainnet"
 				}
 			]
+		},
+		{
+			"name": "Liquality",
+			"url": "https://liquality.io",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA256"
+			],
+			"support": [
+				{
+					"currency": "BTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "ETH",
+					"status": "mainnet"
+				}
+			]
 		}
 	]
 }
