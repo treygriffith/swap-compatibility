@@ -241,6 +241,10 @@ ul.nav {
 	margin-top: 10px;
 }
 
+.sponsor a {
+	text-decoration: none;
+}
+
 .sponsor-text {
 	font-size: 7pt;
 	color: #a7a9ac;
