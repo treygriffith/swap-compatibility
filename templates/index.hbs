@@ -25,16 +25,216 @@
 
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" id="nav-chain-tab" data-toggle="tab" href="#on-chain" role="tab" aria-controls="nav-chain" aria-selected="true">On-Chain</a>
+					<a class="nav-link active" id="nav-channel-tab" data-toggle="tab" href="#channel" role="tab" aria-controls="nav-channel" aria-selected="true">Payment Channel Network</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" id="nav-channel-tab" data-toggle="tab" href="#channel" role="tab" aria-controls="nav-channel" aria-selected="false">Payment Channel Network</a>
+					<a class="nav-link" id="nav-chain-tab" data-toggle="tab" href="#on-chain" role="tab" aria-controls="nav-chain" aria-selected="false">On-Chain</a>
 				</li>
 			</ul>
 
 			<div class="tab-content" id="nav-tabContent">
+				<div class="tab-pane fade show active" id="channel" role="tabpanel" aria-labelledby="nav-channel-tab">
+					<div class="compat-table payment-channel-atomic-swap-compatibility-table">
+						<h1 class="tab-title">
+							Payment Channel Network Compatibility
+						</h1>
+						<h3 class="tab-subtext">Atomic swaps on Lightning and similar networks.</h3>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th></th>
+							<th colspan="{{currencies.length}}">Currencies</th>
+							<th colspan="{{specifications.length}}">Token Specs</th>
+						</tr>
+						<tr>
+							<th></th>
+							{{#each currencies}}
+								<th scope="col" data-toggle="tooltip" title="{{this.name}}">{{this.symbol}}</th>
+							{{/each}}
+							{{#each specifications}}
+								<th scope="col" data-toggle="tooltip" title="{{this.name}}">{{this.symbol}}</th>
+							{{/each}}
+						</tr>
+							</thead>
+							<tbody>
+								{{#each paymentChannelNetworkSwapCompat as |base baseSymbol|}}
+									<tr>
+										<th scope="row">{{baseSymbol}}</th>
+										{{#each base}}
+											<td class="{{classNames}}" {{#if ignore}}data-ignore{{/if}} data-toggle="popover" title="{{baseSymbol}} / {{@key}}" data-content-el="#{{baseSymbol}}-{{@key}}-payment-channel-network-swap-compat">
+												{{#unless ignore}}
+													{{progress}}
+													/
+													{{total}}
+												{{/unless}}
+											</td>
+											{{#unless ignore}}
+												<div class="popover-content" id="{{baseSymbol}}-{{@key}}-payment-channel-network-swap-compat">
+													<div class="row">
+														<div class="popover-column">
+															<h5 class="compat-title">{{baseSymbol}}</h5>
+															<ul class="compat-progress">
+																<li>
+																	{{#if baseHashedTimeLockedContracts}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	HTLC
+																</li>
+																<li>
+																	{{#if basePreimageAuditability}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Public Preimages
+																</li>
+															</ul>
+															<h5 class="compat-title">{{@key}}</h5>
+															<ul class="compat-progress">
+																<li>
+																	{{#if targetHashedTimeLockedContracts}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	HTLC
+																</li>
 
-				<div class="tab-pane fade show active" id="on-chain" role="tabpanel" aria-labelledby="nav-chain-tab">
+																<li>
+																	{{#if targetPreimageAuditability}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Public Preimages
+																</li>
+															</ul>
+															<h5 class="compat-title">Malleability</h5>
+															<ul class="compat-progress">
+																<li>
+																	{{#if baseMalleabilityFix}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	{{baseSymbol}} Fixed
+																</li>
+																<li>
+																	{{#if targetMalleabilityFix}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	{{@key}} Fixed
+															</ul>
+														</div>
+														<div class="popover-column">
+															<h5 class="compat-title">Milestones</h5>
+															<ul class="compat-progress">
+																<li>
+																	{{#if implementationsInDevelopment.length}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Development
+																	{{!-- {{#if implementationsInDevelopment.length}}
+																		({{#each implementationsInDevelopment}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
+																	{{/if}} --}}
+																</li>
+																<li>
+																	{{#if implementationsOnTestnet.length}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Testnet
+																	{{!-- {{#if implementationsOnTestnet.length}}
+																		({{#each implementationsOnTestnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
+																	{{/if}} --}}
+																</li>
+																<li>
+																	{{#if implementationsOnMainnet.length}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Mainnet
+																	{{!-- {{#if implementationsOnMainnet.length}}
+																		({{#each implementationsOnMainnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
+																	{{/if}} --}}
+																</li>
+															</ul>
+															<h5 class="compat-title">Common Hash</h5>
+															<ul class="compat-progress">
+																<li>
+																	{{#if hashFunctionCompatibility.length}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																		No Common Hashes
+																	{{/if}}
+																	{{#if hashFunctionCompatibility.length}}
+																		{{#each hashFunctionCompatibility}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+																	{{/if}}
+																</li>
+															</ul>
+															{{#if implementationsInDevelopment.length}}
+															<h5 class="compat-title">Implementations</h5>
+															{{/if}}
+															<ul class="compat-progress" style="padding-left:10px;">
+																<li>
+																	<div class="imp-list">
+																	{{#if implementationsInDevelopment.length}}
+																	{{#each implementationsInDevelopment}}
+																	<a target="_blank" href="{{this.1.url}}"><span class="icon oi oi-external-link" title="lop" aria-hidden="true"></span>{{this.1.name}}</a><br />{{/each}}
+																	{{/if}}
+																	</div>
+{{!-- 																	{{#if implementationsInDevelopment.length}}
+																		Dev: {{#each implementationsInDevelopment}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a> <span class="icon oi oi-loop" title="lop" aria-hidden="true"> </span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}<br />{{/unless}}{{/each}}
+																	{{/if}}
+																	{{#if implementationsOnTestnet.length}}
+																		<div>Test: {{#each implementationsOnTestnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a> <span class="icon oi oi-loop" title="lop" aria-hidden="true"> </span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}<br />{{/unless}}{{/each}})
+																	{{/if}}
+																	{{#if implementationsOnMainnet.length}}
+																		<div>Main: {{#each implementationsOnMainnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a> <span class="icon oi oi-loop" title="lop" aria-hidden="true"> </span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}<br />{{/unless}}{{/each}})
+																	{{/if}} --}}
+																</li>
+															</ul>
+														</div>
+													</div>
+													<ul class="compat-progress">
+
+
+
+
+
+													</ul>
+												</div>
+											{{/unless}}
+										{{/each}}
+									</tr>
+								{{/each}}
+							</tbody>
+						</table>
+					</div>
+					<div class="key">
+						<span>
+							<div class="key-swatch key-danger"></div>Missing Milestones
+							<div class="key-swatch key-warning"></div>Under Development
+							<div class="key-swatch key-success"></div>Swap-Ready
+						</span>
+						<div class="sponsor">
+							<a href="https://sparkswap.com/">
+								<div class="sponsor-text">Updates provided by</div>
+								<img src="images/logo.svg" width="200px" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="on-chain" role="tabpanel" aria-labelledby="nav-chain-tab">
 					<div class="compat-table on-chain-atomic-swap-compatibility-table">
 						<h1 class="tab-title">
 							On-chain Compatibility
@@ -114,159 +314,6 @@
 															{{#if hashFunctionCompatibility.length}}
 																({{#each hashFunctionCompatibility}}{{this}}{{#unless @last}}, {{/unless}}{{/each}})
 															{{/if}}
-														</li>
-														<li>
-															{{#if implementationsInDevelopment.length}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															Implementations in development
-															{{#if implementationsInDevelopment.length}}
-																({{#each implementationsInDevelopment}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
-															{{/if}}
-														</li>
-														<li>
-															{{#if implementationsOnTestnet.length}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															Implementations on Testnet
-															{{#if implementationsOnTestnet.length}}
-																({{#each implementationsOnTestnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
-															{{/if}}
-														</li>
-														<li>
-															{{#if implementationsOnMainnet.length}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															Implementations on Mainnet
-															{{#if implementationsOnMainnet.length}}
-																({{#each implementationsOnMainnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
-															{{/if}}
-														</li>
-													</ul>
-												</div>
-											{{/unless}}
-										{{/each}}
-									</tr>
-								{{/each}}
-							</tbody>
-						</table>
-					</div>
-					<div class="key">
-						<span>
-							<div class="key-swatch key-danger"></div>Missing Milestones
-							<div class="key-swatch key-warning"></div>Under Development
-							<div class="key-swatch key-success"></div>Swap-Ready
-						</span>
-						<div class="sponsor">
-							<a href="https://sparkswap.com/">
-								<div class="sponsor-text">Updates provided by</div>
-								<img src="images/logo.svg" width="200px" />
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane fade" id="channel" role="tabpanel" aria-labelledby="nav-channel-tab">
-					<div class="compat-table payment-channel-atomic-swap-compatibility-table">
-						<h1 class="tab-title">
-							Payment Channel Network Compatibility
-						</h1>
-						<h3 class="tab-subtext">Atomic swaps on Lightning and similar networks.</h3>
-						<table class="table table-bordered">
-							<thead>
-								<tr>
-									<th></th>
-							<th colspan="{{currencies.length}}">Currencies</th>
-							<th colspan="{{specifications.length}}">Token Specs</th>
-						</tr>
-						<tr>
-							<th></th>
-							{{#each currencies}}
-								<th scope="col" data-toggle="tooltip" title="{{this.name}}">{{this.symbol}}</th>
-							{{/each}}
-							{{#each specifications}}
-								<th scope="col" data-toggle="tooltip" title="{{this.name}}">{{this.symbol}}</th>
-							{{/each}}
-						</tr>
-							</thead>
-							<tbody>
-								{{#each paymentChannelNetworkSwapCompat as |base baseSymbol|}}
-									<tr>
-										<th scope="row">{{baseSymbol}}</th>
-										{{#each base}}
-											<td class="{{classNames}}" {{#if ignore}}data-ignore{{/if}} data-toggle="popover" title="{{baseSymbol}}/{{@key}} Payment Channel Network Swap Compatibility" data-content-el="#{{baseSymbol}}-{{@key}}-payment-channel-network-swap-compat">
-												{{#unless ignore}}
-													{{progress}}
-													/
-													{{total}}
-												{{/unless}}
-											</td>
-											{{#unless ignore}}
-												<div class="popover-content" id="{{baseSymbol}}-{{@key}}-payment-channel-network-swap-compat">
-													<ul class="compat-progress">
-														<li>
-															{{#if baseHashedTimeLockedContracts}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{baseSymbol}} supports HTLC
-														</li>
-														<li>
-															{{#if targetHashedTimeLockedContracts}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{@key}} supports HTLC
-														</li>
-														<li>
-															{{#if basePreimageAuditability}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{baseSymbol}} supports public preimages
-														</li>
-														<li>
-															{{#if targetPreimageAuditability}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{@key}} supports public preimages
-														</li>
-														<li>
-															{{#if hashFunctionCompatibility.length}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															Common hash functions
-															{{#if hashFunctionCompatibility.length}}
-																({{#each hashFunctionCompatibility}}{{this}}{{#unless @last}}, {{/unless}}{{/each}})
-															{{/if}}
-														</li>
-														<li>
-															{{#if baseMalleabilityFix}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{baseSymbol}} fixed transaction malleability
-														</li>
-														<li>
-															{{#if targetMalleabilityFix}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{@key}} fixed transaction malleability
 														</li>
 														<li>
 															{{#if implementationsInDevelopment.length}}

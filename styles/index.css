@@ -12,6 +12,7 @@
 
 .popover {
 	max-width: 700px;
+	min-width: 400px;
 	cursor: auto;
 }
 
@@ -20,11 +21,47 @@
 }
 
 .popover-header {
-	text-align: center;
+	text-align: left;
+	padding: 1rem 2rem;
+	background-color: #222e39;
+	border: none;
 }
 
+.popover-header::before {
+	border-bottom: 1px solid #222e39 !important;
+}
+
+
 .popover .arrow:after {
-	border-bottom-color: #f7f7f7;
+	border-bottom-color: #222e39;
+}
+
+.popover-body {
+	background-color: #445c72;
+	color: #ffffff;
+	padding: 1.5rem 2rem;
+}
+
+.popover-body .row {
+	margin: 0 !important;
+}
+
+.popover-body .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.popover-column {
+	float: left;
+	width: 50%;
+}
+.compat-title {
+	font-size: 10px;
+	color: #94c7ed;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	padding-left: 6px;
 }
 
 .icon {
@@ -34,12 +71,29 @@
 ul.compat-progress {
 	list-style: none;
 	padding-left: 2em;
-	margin-bottom: 0;
+	margin-bottom: 20px;
+}
+
+ul.compat-progress li {
+	font-size: 12px;
+	font-weight: 200;
+	letter-spacing: 0.3;
+	line-height: 20px;
 }
 
 ul.compat-progress span.bullet.icon {
 	margin-left: -1.5em;
 	margin-right: 0.75em;
+}
+
+.imp-list a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.imp-list span {
+	margin-right: 10px;
+	font-size: 10px;
 }
 
 /* Footer */
@@ -53,7 +107,7 @@ body {
 }
 .container-fluid {
 	padding:0 140px;
-	margin-top: 80px;
+	margin-top: 55px;
 }
 
 /* GitHub Link */
@@ -296,4 +350,12 @@ td.bg-warning, .key-warning {
 
 td.bg-danger, .key-danger {
 	background-color: #f1f2f2 !important;
+}
+
+.oi-check {
+	color: #59d64c;
+}
+
+.oi-x {
+	color: #a7a9ac;
 }
