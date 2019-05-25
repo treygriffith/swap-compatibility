@@ -25,6 +25,7 @@
 	padding: 1rem 2rem;
 	background-color: #222e39;
 	border: none;
+	color:#ffffff;
 }
 
 .popover-header::before {
