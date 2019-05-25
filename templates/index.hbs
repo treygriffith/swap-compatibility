@@ -236,84 +236,106 @@
 											</td>
 											{{#unless ignore}}
 												<div class="popover-content" id="{{baseSymbol}}-{{@key}}-on-chain-swap-compat">
-													<ul class="compat-progress">
-														<li>
-															{{#if baseHashedTimeLockedContracts}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{baseSymbol}} supports HTLC
-														</li>
-														<li>
-															{{#if targetHashedTimeLockedContracts}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{@key}} supports HTLC
-														</li>
-														<li>
-															{{#if basePreimageAuditability}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{baseSymbol}} supports public preimages
-														</li>
-														<li>
-															{{#if targetPreimageAuditability}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															{{@key}} supports public preimages
-														</li>
-														<li>
-															{{#if hashFunctionCompatibility.length}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															Common hash functions
-															{{#if hashFunctionCompatibility.length}}
-																({{#each hashFunctionCompatibility}}{{this}}{{#unless @last}}, {{/unless}}{{/each}})
-															{{/if}}
-														</li>
-														<li>
-															{{#if implementationsInDevelopment.length}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															Implementations in development
-															{{#if implementationsInDevelopment.length}}
-																({{#each implementationsInDevelopment}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
-															{{/if}}
-														</li>
-														<li>
-															{{#if implementationsOnTestnet.length}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															Implementations on Testnet
-															{{#if implementationsOnTestnet.length}}
-																({{#each implementationsOnTestnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
-															{{/if}}
-														</li>
-														<li>
-															{{#if implementationsOnMainnet.length}}
-																<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
-															{{else}}
-																<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
-															{{/if}}
-															Implementations on Mainnet
-															{{#if implementationsOnMainnet.length}}
-																({{#each implementationsOnMainnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
-															{{/if}}
-														</li>
-													</ul>
+													<div class="row">
+														<div class="popover-column">
+															<h5 class="compat-title">{{baseSymbol}}</h5>
+															<ul class="compat-progress" style="min-height:60px;">
+																<li>
+																	{{#if baseHashedTimeLockedContracts}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	HTLC
+																</li>
+																<li>
+																	{{#if basePreimageAuditability}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Public Preimages
+																</li>
+															</ul>
+															<h5 class="compat-title">{{@key}}</h5>
+															<ul class="compat-progress" style="min-height: 45px;">
+																<li>
+																	{{#if targetHashedTimeLockedContracts}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	HTLC
+																</li>
+
+																<li>
+																	{{#if targetPreimageAuditability}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Public Preimages
+																</li>
+															</ul>
+															<h5 class="compat-title">Implementations</h5>
+															<ul class="compat-progress">
+																<li>
+																	<span class="imp-list">
+																	{{#if implementationsInDevelopment.length}}
+																	{{#each implementationsInDevelopment}}
+																	<a target="_blank" href="{{this.1.url}}"><span class="bullet icon oi oi-external-link" title="lop" aria-hidden="true"></span>{{this.1.name}} ({{this.0.base}})</a><br />{{/each}}
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																		No Implementations
+																	{{/if}}
+																	</span>
+																</li>
+															</ul>
+														</div>
+														<div class="popover-column">
+															<h5 class="compat-title">Milestones</h5>
+															<ul class="compat-progress">
+																<li>
+																	{{#if implementationsInDevelopment.length}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Development
+																</li>
+																<li>
+																	{{#if implementationsOnTestnet.length}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Testnet
+																</li>
+																<li>
+																	{{#if implementationsOnMainnet.length}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																	{{/if}}
+																	Mainnet
+																</li>
+															</ul>
+															<h5 class="compat-title">Common Hash</h5>
+															<ul class="compat-progress" style="min-height: 45px;">
+																<li>
+																	{{#if hashFunctionCompatibility.length}}
+																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																		No Common Hashes
+																	{{/if}}
+																	{{#if hashFunctionCompatibility.length}}
+																		({{#each hashFunctionCompatibility}}{{this}}{{#unless @last}}, {{/unless}}{{/each}})
+																	{{/if}}
+																</li>
+															</ul>
+														</div>
+													</div>
 												</div>
 											{{/unless}}
 										{{/each}}
