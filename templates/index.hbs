@@ -12,17 +12,6 @@
 			<h1 class="page-title">Atomic Swap Readiness</h1>
 			<h3 class="page-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
 
-<!-- 			<div class="row">
-				<nav class="nav col">
-					<a class="nav-link" href="#on-chain">On-Chain</a>
-					<a class="nav-link" href="#payment-channel-network">Payment Channel Network</a>
-				</nav>
-				<div class="col text-right">
-					<h6>maintained by <a href="http://twitter.com/tgriff3">@tgriff3</a></h6>
-					<p>Spot an error or omission? <a href="http://github.com/treygriffith/swap-compatibility">Submit an issue or pull request</a>
-				</div>
-			</div> -->
-
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
 					<a class="nav-link active" id="nav-channel-tab" data-toggle="tab" href="#channel" role="tab" aria-controls="nav-channel" aria-selected="true">Payment Channel Network</a>
@@ -73,7 +62,7 @@
 													<div class="row">
 														<div class="popover-column">
 															<h5 class="compat-title">{{baseSymbol}}</h5>
-															<ul class="compat-progress">
+															<ul class="compat-progress" style="min-height:60px;">
 																<li>
 																	{{#if baseHashedTimeLockedContracts}}
 																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -92,7 +81,7 @@
 																</li>
 															</ul>
 															<h5 class="compat-title">{{@key}}</h5>
-															<ul class="compat-progress">
+															<ul class="compat-progress" style="min-height: 45px;">
 																<li>
 																	{{#if targetHashedTimeLockedContracts}}
 																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -140,9 +129,6 @@
 																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 																	{{/if}}
 																	Development
-																	{{!-- {{#if implementationsInDevelopment.length}}
-																		({{#each implementationsInDevelopment}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
-																	{{/if}} --}}
 																</li>
 																<li>
 																	{{#if implementationsOnTestnet.length}}
@@ -151,9 +137,6 @@
 																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 																	{{/if}}
 																	Testnet
-																	{{!-- {{#if implementationsOnTestnet.length}}
-																		({{#each implementationsOnTestnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
-																	{{/if}} --}}
 																</li>
 																<li>
 																	{{#if implementationsOnMainnet.length}}
@@ -162,13 +145,10 @@
 																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 																	{{/if}}
 																	Mainnet
-																	{{!-- {{#if implementationsOnMainnet.length}}
-																		({{#each implementationsOnMainnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a><span class="icon oi oi-loop" title="lop" aria-hidden="true"></span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}, {{/unless}}{{/each}})
-																	{{/if}} --}}
 																</li>
 															</ul>
 															<h5 class="compat-title">Common Hash</h5>
-															<ul class="compat-progress">
+															<ul class="compat-progress" style="min-height: 45px;">
 																<li>
 																	{{#if hashFunctionCompatibility.length}}
 																		<span class="bullet icon oi oi-check" title="check" aria-hidden="true"></span>
@@ -181,37 +161,22 @@
 																	{{/if}}
 																</li>
 															</ul>
-															{{#if implementationsInDevelopment.length}}
 															<h5 class="compat-title">Implementations</h5>
-															{{/if}}
-															<ul class="compat-progress" style="padding-left:10px;">
+															<ul class="compat-progress">
 																<li>
-																	<div class="imp-list">
+																	<span class="imp-list">
 																	{{#if implementationsInDevelopment.length}}
 																	{{#each implementationsInDevelopment}}
-																	<a target="_blank" href="{{this.1.url}}"><span class="icon oi oi-external-link" title="lop" aria-hidden="true"></span>{{this.1.name}}</a><br />{{/each}}
+																	<a target="_blank" href="{{this.1.url}}"><span class="bullet icon oi oi-external-link" title="lop" aria-hidden="true"></span>{{this.1.name}} ({{this.0.base}})</a><br />{{/each}}
+																	{{else}}
+																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
+																		No Implementations
 																	{{/if}}
-																	</div>
-{{!-- 																	{{#if implementationsInDevelopment.length}}
-																		Dev: {{#each implementationsInDevelopment}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a> <span class="icon oi oi-loop" title="lop" aria-hidden="true"> </span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}<br />{{/unless}}{{/each}}
-																	{{/if}}
-																	{{#if implementationsOnTestnet.length}}
-																		<div>Test: {{#each implementationsOnTestnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a> <span class="icon oi oi-loop" title="lop" aria-hidden="true"> </span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}<br />{{/unless}}{{/each}})
-																	{{/if}}
-																	{{#if implementationsOnMainnet.length}}
-																		<div>Main: {{#each implementationsOnMainnet}}<a target="_blank" href="{{this.0.url}}">{{this.0.name}}</a> <span class="icon oi oi-loop" title="lop" aria-hidden="true"> </span><a target="_blank" href="{{this.1.url}}">{{this.1.name}}</a>{{#unless @last}}<br />{{/unless}}{{/each}})
-																	{{/if}} --}}
+																	</span>
 																</li>
 															</ul>
 														</div>
 													</div>
-													<ul class="compat-progress">
-
-
-
-
-
-													</ul>
 												</div>
 											{{/unless}}
 										{{/each}}

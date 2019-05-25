@@ -47,6 +47,8 @@ function interoperableImps(imps, baseSymbol, targetSymbol) {
 		return {
 			name: imp.name,
 			url: imp.url,
+			// base: imp.support.find( sup => (sup.currency)).currency, <--- only grabs first item. need to grab all!
+			base: imp.support.find( sup => (sup.currency)).currency,
 			status: imp.support.find( sup => (sup.currency || sup.specification) === baseSymbol ).status,
 			interoperability: imp.interoperability || []
 		}

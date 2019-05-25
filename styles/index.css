@@ -83,12 +83,14 @@ ul.compat-progress li {
 
 ul.compat-progress span.bullet.icon {
 	margin-left: -1.5em;
-	margin-right: 0.75em;
+	margin-right: 1em;
 }
+
 
 .imp-list a {
 	color: #ffffff;
 	text-decoration: none;
+	padding-right: 10px;
 }
 
 .imp-list span {
