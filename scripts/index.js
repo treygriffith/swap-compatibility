@@ -5,7 +5,7 @@ $(function () {
 	  	container: $elem,
 	  	trigger: 'hover',
 	  	placement: 'bottom',
-	  	delay: 200,
+	  	delay: 400,
 	  	html: true,
 	  	content: function() {
 	        var content = $($(this).data('content-el')).children().clone()
