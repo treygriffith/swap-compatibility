@@ -10,7 +10,6 @@
 		<div class="container-fluid">
 			<span class="gh-link"><a href="http://github.com/treygriffith/swap-compatibility" >Submit a PR<img src="images/github-logo.svg" width="22px" /></a></span>
 			<h1 class="page-title">Atomic Swap Readiness</h1>
-			<h3 class="page-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
 
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
@@ -27,7 +26,9 @@
 						<h1 class="tab-title">
 							Payment Channel Network Compatibility
 						</h1>
-						<h3 class="tab-subtext">Atomic swaps on Lightning and similar networks.</h3>
+						<h3 class="tab-subtext">Cross-chain Atomic Swaps using Payment Channel Networks, like the Lightning Network, are able to remain trustless while still settling in a few seconds. However, they require that both currencies support compatible Payment Channel Networks, which are still in their infancy.
+							<br><br>
+							See <a href="https://medium.com/sparkswap/atomic-cross-network-swaps-50c62b51d078">this article on Cross-Network Atomic Swaps</a> or <a href="https://www.youtube.com/watch?v=iuNopQm1Adk&t=124s">this video on Atomic Swaps on Lightning</a> for more information.</h3>
 						<table class="table table-bordered">
 							<thead>
 								<tr>
@@ -165,9 +166,9 @@
 															<ul class="compat-progress">
 																<li>
 																	<span class="imp-list">
-																	{{#if implementationsInDevelopment.length}}
-																	{{#each implementationsInDevelopment}}
-																	<a target="_blank" href="{{this.1.url}}"><span class="bullet icon oi oi-external-link" title="lop" aria-hidden="true"></span>{{this.1.name}} ({{this.0.base}})</a><br />{{/each}}
+																	{{#if implementations.length}}
+																	{{#each implementations}}
+																	<a target="_blank" href="{{url}}"><span class="bullet icon oi oi-external-link" title="lop" aria-hidden="true"></span>{{name}} ({{status}})</a><br />{{/each}}
 																	{{else}}
 																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 																		No Implementations
@@ -189,7 +190,7 @@
 						<span>
 							<div class="key-swatch key-danger"></div>Missing Milestones
 							<div class="key-swatch key-warning"></div>Under Development
-							<div class="key-swatch key-success"></div>Swap-Ready
+							<div class="key-swatch key-success"></div>Swap Ready
 						</span>
 						<div class="sponsor">
 							<a href="https://sparkswap.com/">
@@ -204,7 +205,10 @@
 						<h1 class="tab-title">
 							On-chain Compatibility
 						</h1>
-						<h3 class="tab-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+						<h3 class="tab-subtext">Cross-chain Atomic Swaps executed on-chain are easier to support since they require only scripting on the base blockchain. However, in order to remain trustless, they require multiple transactions on different blockchains to happen in series, limiting the total speed of the transaction.
+							<br>
+							<br>
+						See the <a href="https://en.bitcoin.it/wiki/Atomic_swap">Bitcoin Wiki</a> for more information.</h3>
 						<table class="table table-bordered">
 							<thead>
 								<tr>
@@ -281,9 +285,9 @@
 															<ul class="compat-progress">
 																<li>
 																	<span class="imp-list">
-																	{{#if implementationsInDevelopment.length}}
-																	{{#each implementationsInDevelopment}}
-																	<a target="_blank" href="{{this.1.url}}"><span class="bullet icon oi oi-external-link" title="lop" aria-hidden="true"></span>{{this.1.name}} ({{this.0.base}})</a><br />{{/each}}
+																	{{#if implementations.length}}
+																	{{#each implementations}}
+																	<a target="_blank" href="{{url}}"><span class="bullet icon oi oi-external-link" title="lop" aria-hidden="true"></span>{{name}} ({{status}})</a><br />{{/each}}
 																	{{else}}
 																		<span class="bullet icon oi oi-x" title="check" aria-hidden="true"></span>
 																		No Implementations
@@ -348,7 +352,7 @@
 						<span>
 							<div class="key-swatch key-danger"></div>Missing Milestones
 							<div class="key-swatch key-warning"></div>Under Development
-							<div class="key-swatch key-success"></div>Swap-Ready
+							<div class="key-swatch key-success"></div>Swap Ready
 						</span>
 						<div class="sponsor">
 							<a href="https://sparkswap.com/">

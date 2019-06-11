@@ -35,6 +35,7 @@
 
 .popover .arrow:after {
 	border-bottom-color: #222e39;
+	border-top-color: #445c72;
 }
 
 .popover-body {
@@ -110,7 +111,7 @@ body {
 }
 .container-fluid {
 	padding:0 140px;
-	margin-top: 55px;
+	margin-top: 25px;
 }
 
 /* GitHub Link */
