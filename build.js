@@ -40,61 +40,34 @@ function addClassNames(compat) {
 	return compat
 }
 
-function interoperableImps(imps, baseSymbol, targetSymbol) {
-	let baseImps = imps.filter( imp => {
-		return imp.support.map( sup => sup.currency || sup.specification ).includes(baseSymbol)
-	}).map( imp => {
+function getImplementations(imps, baseSymbol, targetSymbol) {
+	const implementations = imps.filter(({ support }) => {
+		const supportsBase = support.map( sup => sup.currency || sup.specification ).includes(baseSymbol)
+		const supportsTarget = support.map( sup => sup.currency || sup.specification ).includes(targetSymbol)
+		return supportsBase && supportsTarget
+	}).map(({ name, url, support }) => {
+		const baseStatus = support.find( sup => (sup.currency || sup.specification) === baseSymbol ).status
+		const targetStatus = support.find( sup => (sup.currency || sup.specification) === targetSymbol ).status
+		const status = lowerStatus(baseStatus, targetStatus)
+
 		return {
-			name: imp.name,
-			url: imp.url,
-			status: imp.support.find( sup => (sup.currency || sup.specification) === baseSymbol ).status,
-			interoperability: imp.interoperability || []
+			name,
+			url,
+			status
 		}
-	})
-	let baseImpUrls = baseImps.map( imp => imp.url )
-
-	let targetImps = imps.filter( imp => {
-		return imp.support.map( sup => sup.currency || sup.specification ).includes(targetSymbol)
-	}).map( imp => {
-		return {
-			name: imp.name,
-			url: imp.url,
-			status: imp.support.find( sup => (sup.currency || sup.specification) === targetSymbol ).status,
-			interoperability: imp.interoperability || []
-		}
-	})
-	let targetImpUrls = targetImps.map( imp => imp.url )
-
-	let interoperableImps = []
-
-	baseImps.forEach( imp => {
-		imp.interoperability.concat(imp.url).forEach( interop => {
-			if(targetImpUrls.includes(interop)) {
-				let interopImp = targetImps.find( imp => imp.url === interop )
-				interoperableImps.push([imp, interopImp, lowerStatus(imp.status, interopImp.status)])
-			}
-		})
-	})
-
-	targetImps.forEach( imp => {
-		imp.interoperability.concat(imp.url).forEach( interop => {
-			if(baseImpUrls.includes(interop) && !interoperableImps.find( impPair => {
-				return impPair[0].url === interop && impPair[1].url === imp.url
-			})) {
-				let interopImp = baseImps.find( imp => imp.url === interop )
-				interoperableImps.push([interopImp, imp, lowerStatus(imp.status, interopImp.status)])
-			}
-		})
+	}).sort((a, b) => {
+		return devOrder.indexOf(a.status) - devOrder.indexOf(b.status)
 	})
 
 	return {
-		implementationsInDevelopment: interoperableImps.filter( ([,, status]) => {
+		implementations,
+		implementationsInDevelopment: implementations.filter(({ status }) => {
 			return devOrder.indexOf(status) >= devOrder.indexOf("develop")
-		}),
-		implementationsOnTestnet: interoperableImps.filter( ([,, status]) => {
+		}),	
+		implementationsOnTestnet: implementations.filter( ({ status }) => {
 			return devOrder.indexOf(status) >= devOrder.indexOf("testnet")
-		}),
-		implementationsOnMainnet: interoperableImps.filter( ([,, status]) => {
+		}),	
+		implementationsOnMainnet: implementations.filter( ({ status }) => {
 			return devOrder.indexOf(status) >= devOrder.indexOf("mainnet")
 		})
 	}
@@ -133,7 +106,7 @@ currenciesAndSpecifications.forEach( baseCurrency => {
 		atomicSwapCompat[baseCurrency.symbol][targetCurrency.symbol] = Object.assign(
 			{},
 			prerequisites,
-			interoperableImps(compat["on-chain-atomic-swap-implementations"], baseCurrency.symbol, targetCurrency.symbol)
+			getImplementations(compat["on-chain-atomic-swap-implementations"], baseCurrency.symbol, targetCurrency.symbol)
 		)
 		addProgress(prerequisites, atomicSwapCompat[baseCurrency.symbol][targetCurrency.symbol])
 		addClassNames(atomicSwapCompat[baseCurrency.symbol][targetCurrency.symbol])
@@ -150,7 +123,7 @@ currenciesAndSpecifications.forEach( baseCurrency => {
 		paymentChannelNetworkSwapCompat[baseCurrency.symbol][targetCurrency.symbol] = Object.assign(
 			{},
 			paymentChannelNetworkPrerequisites,
-			interoperableImps(compat["payment-channel-atomic-swap-implementations"], baseCurrency.symbol, targetCurrency.symbol)
+			getImplementations(compat["payment-channel-atomic-swap-implementations"], baseCurrency.symbol, targetCurrency.symbol)
 		)
 		addProgress(paymentChannelNetworkPrerequisites, paymentChannelNetworkSwapCompat[baseCurrency.symbol][targetCurrency.symbol])
 		addClassNames(paymentChannelNetworkSwapCompat[baseCurrency.symbol][targetCurrency.symbol])

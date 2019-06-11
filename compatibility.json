@@ -269,9 +269,6 @@
 					"currency": "SYS",
 					"status": "develop"
 				}
-			],
-			"interoperability": [
-				"https://github.com/lightningnetwork/lnd"
 			]
 		},
 		{
@@ -286,10 +283,6 @@
 					"currency": "BTC",
 					"status": "develop"
 				}
-			],
-			"interoperability": [
-				"https://github.com/ACINQ/eclair",
-				"https://github.com/lightningnetwork/lnd"
 			]
 		},
 		{
@@ -354,10 +347,31 @@
 				{
 					"currency": "ETH",
 					"status": "testnet"
+				},
+				{
+					"currency": "BTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DCR",
+					"status": "mainnet"
+				},
+				{
+					"currency": "LTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "PART",
+					"status": "mainnet"
+				},
+				{
+					"currency": "VTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "XZC",
+					"status": "mainnet"
 				}
-			],
-			"interoperability": [
-				"https://github.com/decred/atomicswap"
 			]
 		},
 		{
