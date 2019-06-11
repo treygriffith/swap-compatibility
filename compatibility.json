@@ -8,20 +8,6 @@
 	],
 	"currencies": [
 		{
-			"symbol": "ABY",
-			"name": "ArtByte",
-			"hash-functions": [
-				"RIPEMD160",
-				"SHA1",
-				"SHA256"
-			],
-			"transaction-malleability-fix": {
-				"status": "mainnet"
-			},
-			"preimage-auditability": true,
-			"hashed-time-locked-contracts": true
-		},
-		{
 			"symbol": "BTC",
 			"name": "Bitcoin",
 			"hash-functions": [
@@ -48,8 +34,8 @@
 			"hashed-time-locked-contracts": true
 		},
 		{
-			"symbol": "BLK",
-			"name": "Blackcoin",
+			"symbol": "DASH",
+			"name": "Dash",
 			"hash-functions": [
 				"RIPEMD160",
 				"SHA1",
@@ -60,14 +46,14 @@
 			"hashed-time-locked-contracts": true
 		},
 		{
-			"symbol": "DASH",
-			"name": "Dash",
+			"symbol": "DGB",
+			"name": "DigiByte",
 			"hash-functions": [
 				"RIPEMD160",
 				"SHA1",
 				"SHA256"
 			],
-			"transaction-malleability-fix": false,
+			"transaction-malleability-fix": true,
 			"preimage-auditability": true,
 			"hashed-time-locked-contracts": true
 		},
@@ -94,7 +80,7 @@
 			],
 			"transaction-malleability-fix": false,
 			"preimage-auditability": true,
-			"hashed-time-locked-contracts": false
+			"hashed-time-locked-contracts": true
 		},
 		{
 			"symbol": "ETH",
@@ -139,6 +125,18 @@
 			"hashed-time-locked-contracts": true
 		},
 		{
+			"symbol": "MONA",
+			"name": "Monacoin",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": true,
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
 			"symbol": "XMR",
 			"name": "Monero",
 			"hash-functions": [
@@ -150,6 +148,42 @@
 		{
 			"symbol": "PART",
 			"name": "Particl",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": true,
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "PIVX",
+			"name": "Pivx",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": true,
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "QTUM",
+			"name": "Qtum",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": true,
+			"preimage-auditability": true,
+			"hashed-time-locked-contracts": true
+		},
+		{
+			"symbol": "RVN",
+			"name": "Ravencoin",
 			"hash-functions": [
 				"RIPEMD160",
 				"SHA1",
@@ -228,60 +262,19 @@
 	],
 	"payment-channel-atomic-swap-implementations": [
 		{
-			"name": "lnd",
-			"url": "https://github.com/lightningnetwork/lnd",
+			"name": "Sparkswap",
+			"url": "https://sparkswap.com",
 			"hash-functions": [
-				"RIPEMD160",
 				"SHA256"
 			],
 			"support": [
 				{
 					"currency": "BTC",
-					"status": "develop"
+					"status": "mainnet"
 				},
 				{
 					"currency": "LTC",
-					"status": "develop"
-				}
-			]
-		},
-		{
-			"name": "eclair",
-			"url": "https://github.com/ACINQ/eclair",
-			"hash-functions": [
-				"RIPEMD160",
-				"SHA256"
-			],
-			"support": [
-				{
-					"currency": "BTC",
-					"status": "develop"
-				},
-				{
-					"currency": "LTC",
-					"status": "develop"
-				},
-				{
-					"currency": "GRS",
-					"status": "develop"
-				},
-				{
-					"currency": "SYS",
-					"status": "develop"
-				}
-			]
-		},
-		{
-			"name": "c-lightning",
-			"url": "https://github.com/ElementsProject/lightning",
-			"hash-functions": [
-				"RIPEMD160",
-				"SHA256"
-			],
-			"support": [
-				{
-					"currency": "BTC",
-					"status": "develop"
+					"status": "mainnet"
 				}
 			]
 		},
@@ -294,11 +287,11 @@
 			"support": [
 				{
 					"currency": "ETH",
-					"status": "develop"
+					"status": "mainnet"
 				},
 				{
 					"specification": "ERC20",
-					"status": "develop"
+					"status": "testnet"
 				}
 			]
 		}
@@ -401,124 +394,60 @@
 			],
 			"support": [
 				{
-					"currency": "BAY",
-					"status": "testnet"
-				},
-				{
 					"currency": "BTC",
-					"status": "testnet"
-				},
-				{
-					"currency": "BCH",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "BLOCK",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "DASH",
-					"status": "testnet"
-				},
-				{
-					"currency": "DCR",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "DGB",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "DOGE",
-					"status": "testnet"
-				},
-				{
-					"currency": "DYN",
-					"status": "testnet"
-				},
-				{
-					"currency": "GAME",
-					"status": "testnet"
-				},
-				{
-					"currency": "FAIR",
-					"status": "testnet"
-				},
-				{
-					"currency": "HSR",
-					"status": "testnet"
-				},
-				{
-					"currency": "LBC",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "LTC",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "MONA",
-					"status": "testnet"
-				},
-				{
-					"currency": "MUE",
-					"status": "testnet"
-				},
-				{
-					"currency": "NMC",
-					"status": "testnet"
-				},
-				{
-					"currency": "NAV",
-					"status": "testnet"
-				},
-				{
-					"currency": "PART",
-					"status": "testnet"
-				},
-				{
-					"currency": "PPC",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "PIVX",
-					"status": "testnet"
-				},
-				{
-					"currency": "POT",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "QTUM",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
-					"currency": "SEQ",
-					"status": "testnet"
-				},
-				{
-					"currency": "STRAT",
-					"status": "testnet"
+					"currency": "RVN",
+					"status": "mainnet"
 				},
 				{
 					"currency": "SYS",
-					"status": "testnet"
-				},
-				{
-					"currency": "VRC",
-					"status": "testnet"
-				},
-				{
-					"currency": "XVG",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "VTC",
-					"status": "testnet"
+					"status": "mainnet"
 				},
 				{
 					"currency": "VIA",
-					"status": "testnet"
+					"status": "mainnet"
+				},
+				{
+					"currency": "XZC",
+					"status": "ZCoin"
 				}
 			]
 		},
