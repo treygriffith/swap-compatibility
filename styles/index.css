@@ -110,8 +110,9 @@ body {
 	background-color:#f9f9f9 !important;
 }
 .container-fluid {
-	padding:0 140px;
+	padding:0 80px;
 	margin-top: 25px;
+	display: table;
 }
 
 /* GitHub Link */
@@ -138,6 +139,7 @@ ul.nav {
 /* Table Balance */
 .table {
 	background-color: inherit;
+	width: inherit !important;
 }
 
 .table td {
@@ -156,13 +158,11 @@ ul.nav {
 
 .table thead th {
 	vertical-align: middle;
-	/* */
 	width: 40px;
 	max-width: 40px;
 	min-width: 40px;
 	text-align: center;
 	padding: 8px;
-	/*  */
 }
 
 .tab-pane {
@@ -173,7 +173,8 @@ ul.nav {
 	border-bottom-left-radius: 4px;
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
-	min-width: 1200px;
+	min-width: 1460px;
+	max-width: 1460px;
 }
 
 .table thead tr:nth-child(2) th:first-child {
@@ -187,8 +188,8 @@ ul.nav {
 }
 
 .table thead tr th, .table tbody tr th {
-	width: 52px;
-	min-width: 52px;
+	width: 58px;
+	min-width: 58px;
 	max-width: 60px;
 }
 
@@ -222,6 +223,8 @@ ul.nav {
 	font-size: 14px;
 	font-weight: 300;
 	margin-bottom: 30px;
+	max-width: 70%;
+	line-height: 22px;
 }
 
 .table thead tr:first-of-type {
