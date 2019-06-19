@@ -136,16 +136,22 @@ ul.nav {
 	border:none;
 }
 
+.nav-link:hover {
+	border-bottom: 0px solid #fff !important;
+}
+
 .nav-link.active:before {
 	content: '';
 	display: block;
 	background-color: #fff;
 	height: 3px;
 	position: relative;
-	top: 34px;
+	top: 35px;
 	margin-left: -32px;
 	left: 16px;
+	z-index: 2;
 }
+
 
 /* Table Balance */
 .table {
