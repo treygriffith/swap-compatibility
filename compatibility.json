@@ -111,6 +111,18 @@
 			"hashed-time-locked-contracts": true
 		},
 		{
+			"symbol": "KMD",
+			"name": "Komodo",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA1",
+				"SHA256"
+			],
+			"transaction-malleability-fix": false,
+			"preimage-auditability":true,
+			"hashed-time-locked-contracts": true
+		},
+		{
 			"symbol": "LTC",
 			"name": "Litecoin",
 			"hash-functions": [
