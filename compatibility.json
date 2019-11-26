@@ -506,6 +506,88 @@
 					"status": "mainnet"
 				}
 			]
+		},
+		{
+			"name": "AtomicDEX",
+			"url": "https://github.com/KomodoPlatform/atomicDEX-API",
+			"hash-functions": [
+				"RIPEMD160",
+				"SHA256"
+			],
+			"support": [
+				{
+					"currency": "BTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "BCH",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DASH",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DGB",
+					"status": "mainnet"
+				},
+				{
+					"currency": "DOGE",
+					"status": "mainnet"
+				},
+				{
+					"currency": "ETH",
+					"status": "mainnet"
+				},
+				{
+					"currency": "GRS",
+					"status": "develop"
+				},
+				{
+					"currency": "KMD",
+					"status": "mainnet"
+				},
+				{
+					"currency": "LTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "MONA",
+					"status": "mainnet"
+				},
+				{
+					"currency": "QTUM",
+					"status": "mainnet"
+				},
+				{
+					"currency": "RVN",
+					"status": "mainnet"
+				},
+				{
+					"currency": "SYS",
+					"status": "mainnet"
+				},
+				{
+					"currency": "VIA",
+					"status": "mainnet"
+				},
+				{
+					"currency": "VTC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "XZC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "ZEC",
+					"status": "mainnet"
+				},
+				{
+					"currency": "ERC20",
+					"status": "mainnet"
+				}
+			]
 		}
 	]
 }
